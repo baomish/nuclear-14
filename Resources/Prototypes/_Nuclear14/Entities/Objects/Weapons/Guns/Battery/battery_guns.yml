@@ -1061,3 +1061,44 @@
     backStrength: 6
   - type: StaticPrice
     price: 400 
+
+- type: entity
+  name: КРУТАЯ ПУШКА 228
+  parent: BaseWeaponBattery
+  id: N14EL34 
+  description: Колхоз.
+  components:
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -24
+    maxAngle: -53
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Weapons/Guns/Battery/el34.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Nuclear14/Objects/Weapons/Guns/Battery/el34.rsi
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 25
+  - type: Gun
+    minAngle: 25 # Forge-Change
+    maxAngle: 60 # Forge-Change
+    angleIncrease: 4 # Forge-Change
+    angleDecay: 16 # Forge-Change
+    soundGunshot:
+      collection: N14RechargerRifleGunshot
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 50
+  - type: FollowDistance
+    backStrength: 5
+  - type: StaticPrice
+    price: 175
